@@ -1,0 +1,35 @@
+  <div class="relative min-h-screen bg-base-200"">  
+    <%- include('partials/header') -%>
+        <div class="pb-16">
+            <div class="pt-6">
+                <p class="text-3xl font-bold text-center">My Dashboard</p>
+            </div>
+            <div class="flex justify-center p-6">
+              <a href="/newAttack" class="col-3 btn btn-primary">New Attack</a>
+            </div>
+            <div>
+              <h2 class="text-center text-3xl p-6">Past Attacks</h2>
+              <!-- <div class="grid grid-cols-3 gap-4"> -->
+              <div class="grid grid-cols-3 gap-4 justify-items-center pb-6">
+                <% for(var i =0; i< attacks.length; i++) { %>
+                <div class="block p-6 rounded-lg shadow-lg bg-white max-w-sm" data-id="<%=attacks._id%>">
+                  <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">Date: <%= attacks[i].startDate.toString().slice(0, 15) %></h5>
+                  <p class="text-gray-700 text-base mb-4">
+                    Pain Level: <%= attacks[i].painLevel %>
+                  </p>
+                  <p class="text-gray-700 text-base mb-4">
+                    Triggers: <%= attacks[i].triggers %>
+                  </p>
+                  <p class="text-gray-700 text-base mb-4">
+                    Medicine Taken: <%= attacks[i].medicineTaken %>
+                  </p>
+                  <a href ="attack/<%= attacks[i]._id %>" class="col-3 btn btn-primary">Details</a>
+                </div>
+                <%  } %>   
+              </div>
+            </div>
+        </div>
+    <%- include('partials/footer') -%>
+  </div>  
+  
+

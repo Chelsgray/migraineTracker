@@ -1,0 +1,59 @@
+<div class="relative min-h-screen">
+  <%- include('partials/header') -%>
+    <div class="pb-16"> 
+          <div class="mt-5">
+            <h1 class=" pl-3 py-3 text-3xl">Add a new attack</h1>
+            <div class="pl-3">
+              <form action="/attack/createAttack" method="POST">
+                <div class="py-3">
+                  <label for="startDate" class="form-label block mb-2 text-sm font-medium">Start Date</label>
+                    <input type="date" class="form-control input-bordered text-sm rounded-lg bg-base-200 border-gray-300 focus:ring-blue-500 focus:border-blue-500 block w-1/2" id="startDate" name="startDate">
+                </div>
+                <div class="py-3">
+                  <label for="endDate" class="form-label block mb-2 text-sm font-medium">End Date</label>
+                  <input type="date" class="form-control input-bordered text-sm rounded-lg bg-base-200 border-gray-300 focus:ring-blue-500 focus:border-blue-500 block w-1/2" id="endDate" name="endDate">
+                </div>
+                <div class="py-3">
+                  <label for="startTime" class="form-label block mb-2 text-sm font-medium">Start Time</label>
+                  <input type="time" class="form-control input-bordered text-sm rounded-lg bg-base-200 border-gray-300 focus:ring-blue-500 focus:border-blue-500 block w-1/2" id="startTime" name="startTime">
+              </div>
+                <div class="py-3">
+                  <label for="endTime" class="form-label block mb-2 text-sm font-medium">End Time</label>
+                  <input type="time" class="form-control input-bordered text-sm rounded-lg bg-base-200 border-gray-300 focus:ring-blue-500 focus:border-blue-500 block w-1/2" id="endTime" name="endTime">
+                </div>
+                <div class="py-3">
+                  <label for="painLevel" class="form-label block mb-2 text-sm font-medium">Pain Level (0-10):</label>
+                  <input type="number" min="0" max="10" class="form-control input-bordered text-sm rounded-lg bg-base-200 border-gray-300 focus:ring-blue-500 focus:border-blue-500 block w-1/2 p-2" id="painLevel" name="painLevel">
+                </div>
+                <div class="py-3">
+                  <label for="triggers" class="form-label block mb-2 text-sm font-medium">Triggers</label>
+                  <input type="text" placeholder="Type here" class="input input-bordered form-control bg-base-200 border border-gray-300 text-neutral text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-1/2 p-2.5  dark:focus:ring-blue-500" id="triggers" name="triggers">
+                </div>
+                <div class="py-3">
+                  <label for="medicineTaken" class="form-label block mb-2 text-sm font-medium">Medicine Taken</label>
+                  <input type="text" placeholder="Type here" class="input input-bordered form-control bg-base-200 border border-gray-300 text-neutral text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-1/2 p-2.5  dark:focus:ring-blue-500" id="medicineTaken" name="medicineTaken">
+                </div>
+                <div class="py-3">
+                  <label for="otherRelief" class="form-label block mb-2 text-sm font-medium">Other Relief</label>
+                  <input type="text" placeholder="Type here" class="input input-bordered form-control bg-base-200 border border-gray-300 text-neutral text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-1/2 p-2.5  dark:focus:ring-blue-500" id="otherRelief" name="otherRelief">
+                </div>
+                <div class="py-3">
+                  <p>Did you have an Aura?</p>
+                  <input type="radio" class="form-label " id="yes" name="aura" value="true">
+                  <label for="yes">Yes</label> 
+                  <input type="radio" class="form-label " id="no" name="aura" value="false">
+                  <label for="no">No</label> 
+                </div>
+                <div class="py-3">
+                  <label for="notes" class="form-label block mb-2 text-sm font-medium">Additional Notes</label>
+                  <input type="text" placeholder="Type here" class="input input-bordered form-control bg-base-200 border border-gray-300 text-neutral text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-1/2 p-2.5  dark:focus:ring-blue-500" id="notes" name="notes">
+                </div>
+                <div class="pb-3">
+                  <button class="btn btn-accent" value="Upload">Submit</button>
+                </div>
+              </form>
+            </div>
+          </div>  
+    </div>
+  <%- include('partials/footer') -%>
+</div>
