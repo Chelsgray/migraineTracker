@@ -1,20 +1,16 @@
-# Install
+# Migraine Tracker
+For sufferers of migraines, one of the most frustrating things can be the unpredictable nature of migraine attacks. That combined with the fact that many times in order to be eligible to try certain medications, you have to have a certain number of migraines per month, and have record of trying other medications first. Having the ability to track many details about your migraine attacks can be a valuable tool in diagnosing, treating and understadning your migraines. 
 
-`npm install`
+# How It's Made
+Tech Used: HTML, CSS, Javascript, Tailwind, Node.JS, Express.JS, MongoDB
 
----
 
-# Things to add
+# Optimizations
+  - Mobile Responsiveness 
+  - Ability for users to save previously entered values to easily select them again
+  - Add visual representation such as a calendar and graph to show migraine days
+  - Create a "Most Common" section where user can see data that is recurring to track trends and pattens
+  - Ability to export data to a PDF to send to MD
 
-- Create a `.env` file in config folder and add the following as `key = value`
-  - PORT = 2121 (can be any port example: 3000)
-  - DB_STRING = `your database URI`
-  - CLOUD_NAME = `your cloudinary cloud name`
-  - API_KEY = `your cloudinary api key`
-  - API_SECRET = `your cloudinary api secret`
-
----
-
-# Run
-
-`npm start`
+# Lessons Learned
+I discovered that I would prefer to design larger applications like this with a mobile first approach. Instead of having to edit down and take content away to fit to a mobile device, I would rather have designed the mobile layout first.
