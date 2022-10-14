@@ -2,7 +2,7 @@
 For sufferers of migraines, one of the most frustrating things can be the unpredictable nature of migraine attacks. That combined with the fact that many times in order to be eligible to try certain medications, you have to have a certain number of migraines per month, and have record of trying other medications first. Having the ability to track many details about your migraine attacks can be a valuable tool in diagnosing, treating and understadning your migraines. 
 
 # How It's Made
-Tech Used: HTML, CSS, Javascript, Tailwind, Node.JS, Express.JS, MongoDB
+Tech Used: HTML, Javascript, Tailwind, Node.JS, Express.JS, MongoDB
 
 
 # Optimizations
