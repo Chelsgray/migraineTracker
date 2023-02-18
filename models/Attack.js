@@ -42,31 +42,3 @@ const AttackSchema = new mongoose.Schema({
 })
 
 module.exports = mongoose.model("Attack", AttackSchema);
-
-
-// const AttackSchema = new mongoose.Schema({
-//         user: {
-//             type: mongoose.Schema.Types.ObjectId,
-//             ref: "User"
-//         },
-//         painLevel: {
-//             type: String,
-//             require: true
-//         },
-//         triggers: {
-//             type: String,
-//             require: true
-//         },
-//         medicineTaken: {
-//             type: String,
-//             require: true
-//         },
-//         otherRelief: {
-//             type: String,
-//             require: true
-//         },
-//         notes: {
-//             type: String,
-//             require: true
-//         },
-//     });

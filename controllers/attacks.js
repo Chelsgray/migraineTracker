@@ -4,7 +4,7 @@ const Attack = require("../models/Attack");
 module.exports = {
   getDashboard: async (req, res) => {
     try {
-      const attacks = await Attack.find({ user: req.user.id })
+      const attacks = await Attack.find({ user: req.user.id}).sort({ startDate: "desc" })
       res.render("dashboard.ejs", { attacks: attacks, user: req.user });
     } catch (err) {
       console.log(err);
@@ -18,14 +18,6 @@ module.exports = {
       console.log(err);
     }
   },
-  // getFeed: async (req, res) => {
-  //   try {
-  //     const posts = await Post.find().sort({ createdAt: "desc" }).lean();
-  //     res.render("feed.ejs", { posts: posts });
-  //   } catch (err) {
-  //     console.log(err);
-  //   }
-  // },
   getAttack: async (req, res) => {
     try {
       const attack = await Attack.findById(req.params.id);
@@ -52,7 +44,6 @@ module.exports = {
         notes: req.body.notes,
       });
       console.log("Report has been added!");
-      // res.redirect("/dashboard");
       res.redirect("/dashboard")
     } catch (err) {
       console.log(err);

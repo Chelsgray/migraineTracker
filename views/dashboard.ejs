@@ -9,21 +9,24 @@
             </div>
             <div>
               <h2 class="text-white text-center text-3xl p-6">Past Attacks</h2>
-              <!-- <div class="grid grid-cols-3 gap-4"> -->
-              <div class="grid grid-cols-3 gap-4 justify-items-center pb-6">
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 justify-items-center pb-6">
                 <% for(var i =0; i< attacks.length; i++) { %>
-                <div class="block p-6 rounded-lg shadow-lg bg-base-200 max-w-sm" data-id="<%=attacks._id%>">
-                  <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">Date: <%= attacks[i].startDate.toString().slice(0, 15) %></h5>
-                  <p class="text-gray-700 text-base mb-4">
-                    Pain Level: <%= attacks[i].painLevel %>
-                  </p>
-                  <p class="text-gray-700 text-base mb-4">
-                    Triggers: <%= attacks[i].triggers %>
-                  </p>
-                  <p class="text-gray-700 text-base mb-4">
-                    Medicine Taken: <%= attacks[i].medicineTaken %>
-                  </p>
-                  <a href ="attack/<%= attacks[i]._id %>" class="col-3 btn btn-primary">Details</a>
+                <div class="card w-3/4 bg-secondary text-black-content" data-id="<%=attacks._id%>">
+                  <div class="card-body items-center text-center">
+                    <h5 class="card-title">Date: <%= attacks[i].startDate.toString().slice(0, 15) %></h5>
+                    <p class="text-black">
+                      Pain Level: <%= attacks[i].painLevel %>
+                    </p>
+                    <p class="text-black">
+                      Triggers: <%= attacks[i].triggers %>
+                    </p>
+                    <p class="text-black">
+                      Medicine Taken: <%= attacks[i].medicineTaken %>
+                    </p>
+                      <div class="card-actions justify-end">
+                        <a href ="attack/<%= attacks[i]._id %>" class="col-3 btn btn-primary">Details</a>
+                      </div>  
+                  </div>  
                 </div>
                 <%  } %>   
               </div>
